@@ -1,15 +1,18 @@
 body {
-    max-width: 1440px;
     margin: 0 auto;
     background-color: #f2f2f2;
 }
-
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
 header {
     display: flex;
     justify-content: center;
     position: relative;
     padding-bottom: 180px;
+    margin: 0 auto;
 }
 .div1 {
     background-color: #000;
@@ -53,13 +56,13 @@ header {
 }
 .arrow-img {
     background-color: #D5966C;
-    padding: 9px;
+    padding: 13px;
     transition: linear 0.4s;
 }
 .location-style{
     background-color: #151515;
     color: #fff;
-    padding: 10px 32px 12px 32px;
+    padding: 14px 22px 16px 22px;
     text-transform: uppercase;
     font-family: 'Big Shoulders Display', cursive;
     font-weight: 900;
@@ -97,8 +100,11 @@ header {
 }
 /* main content styling */
 .main-content {
-    padding: 0px 165px;
+    margin: 0px 165px;
     margin-bottom: 180px;
+}
+.left-wrapper img {
+    height: 100%;
 }
 .top-wrapper{
     display: flex;
@@ -144,6 +150,9 @@ header {
     text-transform: uppercase;
     color: #fff;
 }
+.top-box img {
+    width: 100%;
+}
 .bottom-box p {
     font-size: 22px;
     font-weight: 300;
@@ -170,19 +179,34 @@ footer {
     font-family: 'Outfit', sans-serif;
     font-size: 18px;
     line-height: 28px;
-    color: #fff;
+    color:#fff;
     font-weight: 300
 }
+#middle {
+    color: #151515;
+}
+#right img {
+    transition: linear 0.2ms;
+    cursor: pointer;
+    margin-right: 13px;
+    filter: invert(86%) sepia(21%) saturate(761%) hue-rotate(92deg) brightness(99%) contrast(107%);
+}
+#right img:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7496%) hue-rotate(183deg) brightness(112%) contrast(100%);
+}
+
 .right img {
     margin-right: 13px;
+    transition: linear 0.2s;
 }
 .right img:hover {
-    background-color: #D5966C;
     cursor: pointer;
+    filter: invert(65%) sepia(19%) saturate(938%) hue-rotate(341deg) brightness(96%) contrast(87%);
 }
 /* location html */
 #footer {
     background-color: #D5966C;
+    margin-top: 0PX;
 }
 .map-wrapper {
     background: url(./assets/desktop/image-map.png);
@@ -214,6 +238,7 @@ footer {
     padding: 104px 165px;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 0px;
 }
 .location-right-div h4 {
     color: #D5966C;
@@ -251,9 +276,6 @@ footer {
     }
     .div2 {
         height: 700px;
-    }
-    body {
-        max-width: 1024px;
     }
     .main-content {
         padding: 0px 20px;
@@ -298,6 +320,9 @@ footer {
     .div5 {
         top: 80px;
         right: 10px;
+    }
+    .location-style {
+        letter-spacing: 2.5px;
     }
     /* second page */
     .location-right-div {
@@ -355,11 +380,8 @@ footer {
         height: 720px;
     }
     .top-box img {
-        max-width: 280px;
+        /* max-width: 280px; */
         height: 250px;
-    }
-    .bottom-box {
-        max-width: 280px;
     }
     .div3 {
         max-width: 40%;
@@ -378,7 +400,7 @@ footer {
 @media screen and (max-width: 776px){
     header {
         height: 500px;
-        padding: 0px 10px  80px 10px;
+        padding: 0px 0px 80px 0px ;
     }
     .div2 {
         height: 500px;
@@ -410,7 +432,7 @@ footer {
          padding-left: 16px;
          padding-right: 16px;
          font-size: 18px;
-         padding-bottom: 14px;
+         padding-bottom: 18px;
     }
     footer {
         padding: 40px 10px;
@@ -494,6 +516,9 @@ footer {
         font-size: 50px;
         line-height: 50px;
     }
+    .located {
+        padding-bottom: 18px;
+    }
 }
 @media screen and (max-width: 650px){
     .div6 {
@@ -515,7 +540,7 @@ footer {
         font-size: 16px;
         padding-left: 12px;
         padding-right: 12px;
-        padding-bottom: 16px;
+        padding-bottom: 20px;
     }
     header {
         justify-content: center;
@@ -563,6 +588,9 @@ footer {
     .top-box {
         width: 200px;
     }
+    .located {
+        padding-bottom: 20px;
+    }
     /* location page */
     #location-back {
         flex-direction: column;
@@ -574,32 +602,51 @@ footer {
 @media screen and (max-width: 480px){
     .div5 {
         position: static;
-        width: 70%;
+        width: 100%;
+    }
+    .main-content {
+        margin: 0 auto;
+    }
+    .top-wrapper {
+        margin: 0 auto;
+    }
+    #galery-img2 {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .left-div, .right-div {
+        width: 90%;
     }
     .div5 p {
-        width: 100%;
+        width: 90%;
+        padding: 0px 16px;
     }
     .div5 div {
         width: 100%;
+        padding: 0px 16px;
     }
     .div6 {
         position: static;
-        width: 70%;
-        margin-top: 32px;
-        margin-bottom: 32px;
+        width: 100%;
+        margin: 32px 0px;
+    }
+    .div6 img {
+        width: 90%;
+        margin: 0px 16px;
     }
     header {
         flex-direction: column;
         height: auto;
         align-items: center;
-        padding: 0px 16px;
+        padding: 0;
     }
     .div2 {
-        width: 280px;
+        width: 100%;
         height: 240px;
         background: url(./assets/mobile/image-hero.jpg);
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: cover;
     }
     .top-wrapper {
         flex-direction: column-reverse;
@@ -607,27 +654,40 @@ footer {
     }
     .main-content {
         margin-top: 100px;
+        padding: 0px;
     }
     .wrapper {
         flex-direction: column;
         align-items: center;
+        padding-top: 32px;
     }
     .top-box img {
-        width: 240px;
+        width: 100%;
     }
     .top-box {
-        width: 240px;
+        width: 100%;
+        height: auto;
     }
     .right-wrapper {
-        width: 240px;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
     }
     .bottom-box {
-        width: 240px;
-        margin-top: 16px;
+        width: 100%;
+        margin: 16px auto;
+        margin-bottom: 0px;
     }
     .left-wrapper {
         margin-right: 0px;
         margin-bottom: 16px;
+        width: 90%;
+    }
+    .left-wrapper img:nth-child(2) {
+        width: 100%;
+    }
+    .right-wrapper {
+        width: 90%;
     }
     #galery-img2 {
         margin-bottom: 25px;
@@ -676,9 +736,13 @@ footer {
         font-size: 12px;
         font-weight: 500;
         padding-bottom: 20px;
+        letter-spacing: 2;
     }
-    .div2 {
-        width: 200px;
+    .arrow-img {
+        padding: 11px;
+    }
+    .located {
+        padding-bottom: 22px;
     }
     /* location page */
     .map-wrapper {
